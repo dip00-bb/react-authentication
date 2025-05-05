@@ -1,31 +1,41 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import useTitle from "../../Component/Title/useTitle";
+import { Eye, EyeClosed } from "lucide-react";
 
 export default function Login() {
-
+    const [showPassword, setShowPassword] = useState(false)
     useTitle("login")
-    const {logInUser,setUser}=use(AuthContext);
+    const { logInUser, setUser, createWithGoogle } = use(AuthContext);
 
-    const navigate=useNavigate()
-    const location =useLocation();
+    const handleGoogleLogIn = () => {
+        createWithGoogle().then(() => {
+            toast("Login Successful");
+            navigate(`${location.state ? location.state : '/'}`)
+        }).catch(error => {
+            toast.warn(error.message)
+        })
+    }
 
-    const handleLogIn=(e)=>{
+    const navigate = useNavigate()
+    const location = useLocation();
+
+    const handleLogIn = (e) => {
 
         e.preventDefault();
-        const target=e.target;
-        const email=target.email.value;
-        const password=target.password.value;
+        const target = e.target;
+        const email = target.email.value;
+        const password = target.password.value;
 
-        console.log(email,password)
+        console.log(email, password)
 
-        logInUser(email,password).then(result=>{
+        logInUser(email, password).then(result => {
             setUser(result.user);
             toast("Login successful");
-            navigate(`${location.state? location.state : '/'}`)
-        }).catch(error=>{
+            navigate(`${location.state ? location.state : '/'}`)
+        }).catch(error => {
             toast(error.message)
         })
     }
@@ -48,13 +58,16 @@ export default function Login() {
 
                     <div>
                         <label className="block text-gray-300 mb-1">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Your Password"
-                            className="w-full p-2 rounded bg-gray-700/60 text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                        />
+                        <div className="relative">
+                            <input
+                                type={showPassword ? 'text' : 'password'}
+                                name="password"
+                                placeholder="Your Password" 
+                                className="w-full p-2 rounded bg-gray-700/60 text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                            />
+                            <span className="absolute top-2 right-2.5" onClick={() => setShowPassword(!showPassword)}> {showPassword ? <EyeClosed size={20}></EyeClosed> : <Eye size={20}></Eye>} </span>
+                        </div>
                     </div>
 
                     <button
@@ -75,7 +88,7 @@ export default function Login() {
                 </div>
 
                 <div className="mt-6 text-center">
-                    <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    <button onClick={handleGoogleLogIn} className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                         Login with Google
                     </button>
                 </div>

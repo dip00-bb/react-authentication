@@ -1,44 +1,52 @@
-import React, { use } from "react";
-import { Link } from "react-router";
+import React, { use, useState } from "react";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from 'react-toastify';
 import useTitle from "../../Component/Title/useTitle";
+import { Eye, EyeClosed } from "lucide-react";
 export default function Register() {
 
   useTitle('register')
-  const {createUser,setUser,updateUser,createWithGoogle}=use(AuthContext);
 
-  const handleSignUpWithGoogle=()=>{
-    createWithGoogle().then(()=>{
+  const [showPassword, setShowPassword] = useState(false)
+  const { createUser, setUser, updateUser, createWithGoogle } = use(AuthContext);
+  const navigate = useNavigate();
+
+
+
+  const handleSignUpWithGoogle = () => {
+    createWithGoogle().then(() => {
       toast("Registration Successful")
-    }).catch(error=>{
-       toast.warn(error.message)
+    }).catch(error => {
+      toast.warn(error.message)
     })
   }
 
-  const handleSignUpUser=(e)=>{
+  const handleSignUpUser = (e) => {
     e.preventDefault()
     const target = e.target;
-    const userName=target.name.value;
-    const userEmail=target.email.value;
-    const userPhotoURL=target.photoUrl.value;
-    const password=target.password.value; 
+    const userName = target.name.value;
+    const userEmail = target.email.value;
+    const userPhotoURL = target.photoUrl.value;
+    const password = target.password.value;
 
-    createUser(userEmail,password).
-    then(result=>{
-      const user=result.user
-      toast("Registration Successful")
-      updateUser({displayName:userName,photoURL:userPhotoURL}).then(()=>{
-        setUser({...user,displayName:userName,photoURL:userPhotoURL});
+    createUser(userEmail, password).
+      then(result => {
+        const user = result.user
 
-      }).catch(error=>{
-        setUser(user)
+        updateUser({ displayName: userName, photoURL: userPhotoURL }).then(() => {
+          setUser({ ...user, displayName: userName, photoURL: userPhotoURL });
+          toast("Registration Successful");
+          navigate('/')
+
+        }).catch(error => {
+          setUser(user)
+          toast.warn(error.message);
+        })
+      }).catch(error => {
         toast.warn(error.message);
       })
-    }).catch(error=>{
-      toast.warn(error.message);
-    })
-    
+
   }
 
   return (
@@ -55,6 +63,8 @@ export default function Register() {
               className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
+
+
           </div>
 
           <div>
@@ -80,15 +90,20 @@ export default function Register() {
 
           <div>
             <label className="block text-gray-300 mb-1">Password</label>
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-              pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}"
-              title="Password must be at least 6 characters and include at least one uppercase and one lowercase letter."
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Password"
+                name="password"
+                className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+                pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                title="Password must be at least 6 characters and include at least one uppercase and one lowercase letter."
+              />
+              <span className="absolute top-2 right-2.5" onClick={()=>setShowPassword(!showPassword)}> {showPassword ? <EyeClosed size={20}></EyeClosed> : <Eye size={20}></Eye>} </span>
+            </div>
+
+
           </div>
 
           <button
