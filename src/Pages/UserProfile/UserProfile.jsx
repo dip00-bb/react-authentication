@@ -16,7 +16,7 @@ const UserProfile = () => {
         const url=e.target.url.value
         updateUser(name,url).then(()=>{
             toast('Profile updated successful');
-            setUser(user)
+            setUser({...user, displayName: name, photoURL: url})
         }).catch(error=>{
             toast.warn(error.message)
         })
