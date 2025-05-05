@@ -12,12 +12,16 @@ const ForgetPassword = () => {
         e.preventDefault();
         const targetedEmail=e.target.email.value;
         forgetPassword(targetedEmail).then(()=>{
-            toast.success("Password reset successful")
+            toast.warn("Please check your email")
         }).catch(error=>{
             toast.error(error.message)
         })
     }
 
+    const redirectToGmail = () => {
+        window.open("https://mail.google.com", "_blank"); // Opens Gmail in a new tab
+      };
+      
     return (
         <div className="min-h-screen flex items-center justify-center p-4">
             <form onSubmit={handleResetPassword}>
@@ -30,7 +34,7 @@ const ForgetPassword = () => {
                     required
                 />
 
-                <button type='submit' className="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset Password</button>
+                <button onClick={redirectToGmail} type='submit' className="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset Password</button>
             </form>
         </div>
     );

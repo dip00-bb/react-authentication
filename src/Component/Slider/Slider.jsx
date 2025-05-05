@@ -46,8 +46,8 @@ const Slider = () => {
         //     </div>
         // </div>
 
-        <div className='px-10 rounded-3xl'>
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper rounded-3xl h-[60rem]" >
+        <div className='px-10 rounded-3xl h-fit' >
+            <Swiper navigation={false} modules={[Navigation]} className="mySwiper rounded-3xl lg:h-[60rem]" >
                 <SwiperSlide><img src="/superman.jpg "
                     className="w-full rounded-3xl" /></SwiperSlide>
                 <SwiperSlide><img src="/interstellar.jpg"
