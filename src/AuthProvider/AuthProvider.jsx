@@ -6,9 +6,6 @@ export const AuthContext=createContext()
 
 const AuthProvider = ({children}) => {
 
-
-
-
     const createUser=(email,password)=>{
         return createUserWithEmailAndPassword(auth,email,password);
     }
@@ -16,8 +13,6 @@ const AuthProvider = ({children}) => {
     const logInUser=(email,password)=>{
         return signInWithEmailAndPassword(auth,email,password);
     }
-
-
 
     const authData={
         createUser,

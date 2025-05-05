@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Component/Header/Navbar';
 import { Outlet, useLocation } from 'react-router';
 import Footer from '../Component/Footer/Footer';
+import { ToastContainer} from 'react-toastify';
 
 const MainLayout = () => {
 
@@ -44,7 +45,9 @@ const MainLayout = () => {
             <footer className='pt-5'>
                 <Footer />
             </footer>
+            <ToastContainer />
         </div>
+                    
     );
 };
 
