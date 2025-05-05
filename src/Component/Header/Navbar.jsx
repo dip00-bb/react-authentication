@@ -48,13 +48,21 @@ const Navbar = () => {
 
             <div className="navbar-end flex gap-3">
                 {
-                    user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src={user.photoURL} />
+                    user && <div className="relative group">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img
+                                    alt="Tailwind CSS Navbar component"
+                                    src={user.photoURL}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            {user.displayName}
                         </div>
                     </div>
+
                 }
                 <Link to={!user && '/auth/login'} onClick={user && handleLogOut} className="text-gray-300 hover:text-white bg-transparent hover:bg-red-500 hover:shadow-[0_0_10px_#dc2626] transition-all duration-500 px-4 py-2 rounded-md">{user ? 'Logout' : 'Log In'}</Link>
             </div>

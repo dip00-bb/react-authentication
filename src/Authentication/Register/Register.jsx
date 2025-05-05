@@ -4,8 +4,15 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from 'react-toastify';
 export default function Register() {
 
-  const {createUser,setUser,updateUser}=use(AuthContext);
+  const {createUser,setUser,updateUser,createWithGoogle}=use(AuthContext);
 
+  const handleSignUpWithGoogle=()=>{
+    createWithGoogle().then(()=>{
+      toast("Registration Successful")
+    }).catch(error=>{
+       toast.warn(error.message)
+    })
+  }
 
   const handleSignUpUser=(e)=>{
     e.preventDefault()
@@ -18,6 +25,7 @@ export default function Register() {
     createUser(userEmail,password).
     then(result=>{
       const user=result.user
+      toast("Registration Successful")
       updateUser({displayName:userName,photoURL:userPhotoURL}).then(()=>{
         setUser({...user,displayName:userName,photoURL:userPhotoURL});
 
@@ -99,7 +107,7 @@ export default function Register() {
         </div>
 
         <div className="mt-6 text-center">
-          <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <button onClick={handleSignUpWithGoogle} className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
             Login with Google
           </button>
         </div>
