@@ -1,0 +1,53 @@
+[
+    {
+        
+      "thumbnail": "https://i.ibb.co.com/RpWSqCtm/amazon-prime.png",
+      "name": "Amazon Prime Video",
+      "TechCategory": "Streaming Service",
+      "price": "$14.99",
+      "frequency": "Monthly"
+    },
+    {
+      "thumbnail": "https://i.ibb.co.com/rK3D7YXF/appletv.jpg",
+      "name": "Apple TV+",
+      "TechCategory": "Streaming Service",
+      "price": "$9.99",
+      "frequency": "Monthly"
+    },
+    {
+      "thumbnail": "https://i.ibb.co.com/CK6cqxsY/chorki.jpg",
+      "name": "Chorki",
+      "TechCategory": "Streaming Service",
+      "price": "৳99",
+      "frequency": "Monthly"
+    },
+    {
+      "thumbnail": "https://i.ibb.co.com/PsPjWCm6/disney.jpg",
+      "name": "Disney+",
+      "TechCategory": "Streaming Service",
+      "price": "$7.99",
+      "frequency": "Monthly"
+    },
+    {
+      "thumbnail": "https://i.ibb.co.com/d03rGbks/hbo.jpg",
+      "name": "HBO Max",
+      "TechCategory": "Streaming Service",
+      "price": "$15.99",
+      "frequency": "Monthly"
+    },
+    {
+      "thumbnail": "https://i.ibb.co.com/ZRWHDrVx/hoichoi.jpg",
+      "name": "Hoichoi",
+      "TechCategory": "Streaming Service",
+      "price": "৳699",
+      "frequency": "Yearly"
+    },
+    {
+      "thumbnail": "https://i.ibb.co.com/4gMhvXQy/netflix.jpg",
+      "name": "Netflix",
+      "TechCategory": "Streaming Service",
+      "price": "$15.49",
+      "frequency": "Monthly"
+    }
+  ]
+  
