@@ -1,12 +1,14 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import useTitle from '../Component/Title/useTitle';
 
 const Details = () => {
+
 
     const subscriptionData = useLoaderData();
 
     const { id } = useParams();
-
+    useTitle(`${id}`)
     const matchedData = subscriptionData.find(data => data.id == id);
     const { thumbnail, name, TechCategory, price, frequency, description, features } = matchedData
     return (

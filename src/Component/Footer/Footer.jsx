@@ -61,6 +61,7 @@
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import React from 'react';
 import { BsTwitter } from 'react-icons/bs';
+import { Link } from 'react-router';
 
 
 export default function Footer() {
@@ -73,13 +74,13 @@ export default function Footer() {
         <div className='flex flex-col justify-center'>
           <div className="flex space-x-6 flex-wrap items-center">
             {['Home', 'Blog', 'Press', 'Librarians', 'Gift Cards', 'About', 'Contact', 'Help'].map((item) => (
-              <a
+              <Link
                 key={item}
-                href="#"
+                to={item==='Home' && '/'}
                 className="text-sm hover:underline"
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -100,7 +101,7 @@ export default function Footer() {
           </div>
 
           <div className="mt-6 flex space-x-4 text-xs text-gray-400">
-            <a href="#" className="hover:underline">Terms & Conditions</a>
+            <Link to='/termscondition' className="hover:underline">Terms & Conditions</Link>
             <a href="#" className="hover:underline">Privacy Policy</a>
           </div>
 
@@ -121,7 +122,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a href="#" className="flex-1">
                 <img src="/google-play-badge.png" alt="Get it on Google Play" />
-              </a>
+              </a> 
               <a href="#" className="flex-1">
                 <img src="/app-store-badge.png" alt="Download on the App Store" />
               </a>

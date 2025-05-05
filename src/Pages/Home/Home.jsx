@@ -4,7 +4,9 @@ import CardsBody from '../../SubscriptionCard/CardsBody';
 import Loader from '../../Component/Loader/Loader';
 import Marque from '../../Component/Marquee/Marque';
 import Ourpromise from '../../Component/OurPromise/Ourpromise';
+import useTitle from '../../Component/Title/useTitle';
 const Home = () => {
+    useTitle("Home")
     return (
         <div>
             <h1 className="font-medium text-red-500 text-2xl md:text-4xl lg:text-6xl text-center my-5 mb-10">

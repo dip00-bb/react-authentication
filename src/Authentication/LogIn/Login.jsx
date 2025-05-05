@@ -2,8 +2,11 @@ import React, { use } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import useTitle from "../../Component/Title/useTitle";
 
 export default function Login() {
+
+    useTitle("login")
     const {logInUser,setUser}=use(AuthContext);
 
     const navigate=useNavigate()

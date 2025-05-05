@@ -2,8 +2,10 @@ import React, { use } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from 'react-toastify';
+import useTitle from "../../Component/Title/useTitle";
 export default function Register() {
 
+  useTitle('register')
   const {createUser,setUser,updateUser,createWithGoogle}=use(AuthContext);
 
   const handleSignUpWithGoogle=()=>{
