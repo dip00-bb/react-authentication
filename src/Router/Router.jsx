@@ -3,6 +3,9 @@ import MainLayout from "../WebsiteLayout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Login from "../Authentication/LogIn/Login";
 import Register from "../Authentication/Register/Register";
+import DetailsParent from "../DetailsPage/DetailsParent";
+import Loader from "../Component/Loader/Loader";
+import Details from "../DetailsPage/Details";
 
 export const router=createBrowserRouter([
     
@@ -21,6 +24,12 @@ export const router=createBrowserRouter([
             {
                 path:'/auth/register',
                 Component:Register
+            },
+            {
+                path:'/platform/:id',
+                Component:Details,
+                loader:()=>fetch('/card-data.json'),
+                hydrateFallbackElement:<Loader></Loader>
             }
         ]
     }
