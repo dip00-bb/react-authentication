@@ -1,16 +1,39 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 export default function Login() {
+    const {logInUser,setUser}=use(AuthContext);
+
+
+    const handleLogIn=(e)=>{
+
+        e.preventDefault();
+        const target=e.target;
+        const email=target.email.value;
+        const password=target.password.value;
+
+        console.log(email,password)
+
+        logInUser(email,password).then(result=>{
+            setUser(result.user);
+            toast("Login successful")
+        }).catch(error=>{
+            toast(error.message)
+        })
+    }
+
     return (
         <div className="min-h-screen flex items-center justify-center p-4">
             <div className="w-full max-w-md bg-black/55 rounded-sm p-6 shadow-lg">
                 <h2 className="text-2xl font-bold text-white text-center mb-6">Login</h2>
-                <form className="space-y-4">
+                <form onSubmit={handleLogIn} className="space-y-4">
                     <div>
                         <label className="block text-gray-300 mb-1">Email</label>
                         <input
                             type="email"
+                            name="email"
                             placeholder="Your Email"
                             className="w-full p-2 rounded bg-gray-700/50 text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             required
@@ -21,6 +44,7 @@ export default function Login() {
                         <label className="block text-gray-300 mb-1">Password</label>
                         <input
                             type="password"
+                            name="password"
                             placeholder="Your Password"
                             className="w-full p-2 rounded bg-gray-700/60 text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             required

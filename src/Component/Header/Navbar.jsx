@@ -1,8 +1,20 @@
 
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { use } from 'react';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
+
+    const { user, logOutUser } = use(AuthContext);
+
+    const handleLogOut = () => {
+        logOutUser().then(() => {
+            toast("Log out successful")
+        }).catch(error => {
+            toast.warn(error.message)
+        })
+    }
 
     const link = <><li><NavLink to='/'>Home</NavLink></li><li><NavLink>My Profile</NavLink></li></>;
     return (
@@ -20,9 +32,9 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="text-2xl font-extrabold text-red-600 hover:text-white hover:drop-shadow-[0_0_8px_#dc2626] transition-all duration-300 cursor-pointer tracking-wide">
+                <Link to='/' className="text-2xl font-extrabold text-red-600 hover:text-white hover:drop-shadow-[0_0_8px_#dc2626] transition-all duration-300 cursor-pointer tracking-wide">
                     Lava<span className="text-white">ROX</span>
-                </a>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -35,14 +47,16 @@ const Navbar = () => {
 
 
             <div className="navbar-end flex gap-3">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <img
-                            alt="Tailwind CSS Navbar component"
-                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                {
+                    user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img
+                                alt="Tailwind CSS Navbar component"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                     </div>
-                </div>
-                <Link to='/auth/login' className="text-gray-300 hover:text-white bg-transparent hover:bg-red-500 hover:shadow-[0_0_10px_#dc2626] transition-all duration-500 px-4 py-2 rounded-md">Log In</Link>
+                }
+                <Link to={!user && '/auth/login'} onClick={user && handleLogOut} className="text-gray-300 hover:text-white bg-transparent hover:bg-red-500 hover:shadow-[0_0_10px_#dc2626] transition-all duration-500 px-4 py-2 rounded-md">{user ? 'Logout' : 'Log In'}</Link>
             </div>
         </div>
     );

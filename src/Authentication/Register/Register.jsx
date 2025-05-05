@@ -4,7 +4,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from 'react-toastify';
 export default function Register() {
 
-  const {createUser}=use(AuthContext);
+  const {user,createUser,setUser}=use(AuthContext);
 
   const handleSignUpUser=(e)=>{
     e.preventDefault()
@@ -16,6 +16,7 @@ export default function Register() {
 
     createUser(userEmail,password).
     then(result=>{
+      setUser(result.user)
       toast("Signup Successful")
     }).catch(error=>{
       toast.warn(error.message);
