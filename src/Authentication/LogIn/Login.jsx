@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
@@ -6,9 +6,13 @@ import useTitle from "../../Component/Title/useTitle";
 import { Eye, EyeClosed } from "lucide-react";
 
 export default function Login() {
-    const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
+    const reference=useRef()
+ 
+    console.log("the refence",reference?.current?.value)
+
     useTitle("login")
-    const { logInUser, setUser, createWithGoogle } = use(AuthContext);
+    const { logInUser, setUser, createWithGoogle,setEmail } = use(AuthContext);
 
     const handleGoogleLogIn = () => {
         createWithGoogle().then(() => {
@@ -51,6 +55,7 @@ export default function Login() {
                             type="email"
                             name="email"
                             placeholder="Your Email"
+                            ref={reference}
                             className="w-full p-2 rounded bg-gray-700/50 text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             required
                         />
@@ -69,13 +74,15 @@ export default function Login() {
                             <span className="absolute top-2 right-2.5" onClick={() => setShowPassword(!showPassword)}> {showPassword ? <EyeClosed size={20}></EyeClosed> : <Eye size={20}></Eye>} </span>
                         </div>
                     </div>
-
+                    
                     <button
                         type="submit"
                         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     >
                         Login
-                    </button>
+                    </button> 
+
+                    <Link to='/forgetpassword' onClick={()=>setEmail(reference?.current?.value)} className="hover:text-blue-500 hover:underline cursor-pointer">Forget password?</Link>
                 </form>
 
                 <div className="text-center mt-4">

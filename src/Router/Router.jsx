@@ -9,6 +9,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../Pages/ErrorPages/ErrorPage";
 import TermsAndCondition from "../Component/TermsAndCondition/TermsAndCondition";
 import UserProfile from "../Pages/UserProfile/UserProfile";
+import ForgetPassword from "../Authentication/ForgetPassword/ForgetPassword";
 
 export const router=createBrowserRouter([
     
@@ -41,6 +42,10 @@ export const router=createBrowserRouter([
             {
                 path:'/userdetails',
                 element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>,
+            },
+            {
+                path:'/forgetpassword',
+                Component:ForgetPassword
             }
         ]
     },

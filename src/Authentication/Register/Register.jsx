@@ -34,7 +34,7 @@ export default function Register() {
       then(result => {
         const user = result.user
 
-        updateUser({ displayName: userName, photoURL: userPhotoURL }).then(() => {
+        updateUser(userName,userPhotoURL).then(() => {
           setUser({ ...user, displayName: userName, photoURL: userPhotoURL });
           toast("Registration Successful");
           navigate('/')
@@ -85,6 +85,7 @@ export default function Register() {
               placeholder="Photo URL"
               name="photoUrl"
               className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
           </div>
 
