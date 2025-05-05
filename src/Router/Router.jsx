@@ -6,6 +6,7 @@ import Register from "../Authentication/Register/Register";
 import DetailsParent from "../DetailsPage/DetailsParent";
 import Loader from "../Component/Loader/Loader";
 import Details from "../DetailsPage/Details";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router=createBrowserRouter([
     
@@ -27,7 +28,7 @@ export const router=createBrowserRouter([
             },
             {
                 path:'/platform/:id',
-                Component:Details,
+                element:<PrivateRoute><Details></Details></PrivateRoute>,
                 loader:()=>fetch('/card-data.json'),
                 hydrateFallbackElement:<Loader></Loader>
             }
