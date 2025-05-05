@@ -3,8 +3,8 @@ import { Link } from "react-router";
 
 export default function Register() {
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-gray-800 rounded-2xl p-6 shadow-lg">
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="w-full max-w-md bg-gray-800/70 rounded-2xl p-6 shadow-lg">
         <h2 className="text-2xl font-bold text-white text-center mb-6">Register</h2>
         <form className="space-y-4">
           <div>
@@ -12,7 +12,7 @@ export default function Register() {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -22,7 +22,7 @@ export default function Register() {
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -32,7 +32,7 @@ export default function Register() {
             <input
               type="url"
               placeholder="Photo URL"
-              className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -41,7 +41,7 @@ export default function Register() {
             <input
               type="password"
               placeholder="Password"
-              className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 rounded bg-gray-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
               pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}"
               title="Password must be at least 6 characters and include at least one uppercase and one lowercase letter."

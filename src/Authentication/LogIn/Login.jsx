@@ -3,8 +3,8 @@ import { Link } from "react-router";
 
 export default function Login() {
     return (
-        <div  className=" flex items-center justify-center p-4">
-            <div className="w-full max-w-md bg-gray-800 rounded-2xl p-6 shadow-lg">
+        <div className="min-h-screen flex items-center justify-center p-4">
+            <div className="w-full max-w-md bg-black/55 rounded-sm p-6 shadow-lg">
                 <h2 className="text-2xl font-bold text-white text-center mb-6">Login</h2>
                 <form className="space-y-4">
                     <div>
@@ -12,7 +12,7 @@ export default function Login() {
                         <input
                             type="email"
                             placeholder="Your Email"
-                            className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full p-2 rounded bg-gray-700/50 text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             required
                         />
                     </div>
@@ -22,7 +22,7 @@ export default function Login() {
                         <input
                             type="password"
                             placeholder="Your Password"
-                            className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full p-2 rounded bg-gray-700/60 text-red-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             required
                         />
                     </div>
