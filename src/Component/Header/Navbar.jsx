@@ -1,5 +1,5 @@
 
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
                             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                     </div>
                 </div>
-                <a className="btn">Log In</a>
+                <Link to='/auth/login' className="btn">Log In</Link>
             </div>
         </div>
     );
