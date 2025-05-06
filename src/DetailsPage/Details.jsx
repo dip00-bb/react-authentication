@@ -35,11 +35,10 @@ const Details = () => {
                 <div className="flex-1 space-y-2 flex flex-col justify-center">
                     <h1 className="text-3xl font-bold text-red-500">{name}</h1>
                     <p className="text-gray-400">Streaming Service</p>
-                    <p><span className="font-semibold">{frequency} Cost:</span> {price}</p>
+                    <p><span className="font-semibold">{frequency} Cost: </span> {price}</p>
                     <p><span className="font-semibold">Resolution:</span>{features[0]}</p>
-                    <p><span className="font-semibold">Simultaneous Screens:</span> {features[1]}</p>
+                    <p><span className="font-semibold">Simultaneous Screens: </span> {features[1]}</p>
                     <p><span className="font-semibold">Content:</span> {features[2]}</p>
-                    <p><span className="font-semibold">Content:</span> {features[3]}</p>
 
                     <div className='mt-5'>
                         <p className=' text-red-500'>Description:</p>

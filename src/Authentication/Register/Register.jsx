@@ -17,6 +17,7 @@ export default function Register() {
   const handleSignUpWithGoogle = () => {
     createWithGoogle().then(() => {
       toast("Registration Successful")
+      navigate('/')
     }).catch(error => {
       toast.warn(error.message)
     })
@@ -33,8 +34,9 @@ export default function Register() {
     createUser(userEmail, password).
       then(result => {
         const user = result.user
-
+        
         updateUser(userName,userPhotoURL).then(() => {
+  
           setUser({ ...user, displayName: userName, photoURL: userPhotoURL });
           toast("Registration Successful");
           navigate('/')
@@ -126,7 +128,7 @@ export default function Register() {
 
         <div className="mt-6 text-center">
           <button onClick={handleSignUpWithGoogle} className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Login with Google
+            SignUp with Google
           </button>
         </div>
       </div>

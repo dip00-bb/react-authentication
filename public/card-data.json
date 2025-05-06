@@ -8,9 +8,8 @@
     "frequency": "Monthly",
     "description": "Amazon Prime Video offers popular movies, TV shows, award-winning Amazon Originals, and live sports.",
     "features": [
-      "Exclusive Prime Originals",
-      "Ad-free viewing",
-      "Offline downloads",
+      "4K Ultra HD Available",
+      "1",
       "Live sports coverage"
     ],
     "left":"16",
@@ -25,10 +24,9 @@
     "frequency": "Monthly",
     "description": "Apple TV+ is a streaming service featuring Apple Originals—award-winning series, compelling dramas, groundbreaking documentaries, and kids’ entertainment.",
     "features": [
-      "Ad-free Apple Originals",
-      "Family sharing",
-      "Offline viewing",
-      "Available on Apple devices"
+      "4K Ultra HD Available",
+      "2",
+      "Movies, Series, and Originals"
     ],
     "left":"10",
     "watchTime":"580"
@@ -42,10 +40,9 @@
     "frequency": "Monthly",
     "description": "Chorki is a Bangladeshi streaming platform that offers a wide range of Bengali movies, web series, and original content.",
     "features": [
-      "Bengali Originals",
-      "Ad-free viewing",
-      "Affordable pricing",
-      "Mobile-friendly interface"
+      "4K Ultra HD Available",
+      "3",
+      "Series, and Originals"
     ],
     "left":"14",
     "watchTime":"280"
@@ -59,10 +56,9 @@
     "frequency": "Monthly",
     "description": "Disney+ offers movies and shows from Disney, Pixar, Marvel, Star Wars, and National Geographic, all in one place.",
     "features": [
-      "Family-friendly content",
-      "Marvel and Star Wars series",
-      "Offline downloads",
-      "Multiple profiles"
+      "4K Ultra HD Available",
+      "2",
+      "Movies, Series"
     ],
     "left":"13",
     "watchTime":"480"
@@ -76,10 +72,9 @@
     "frequency": "Monthly",
     "description": "HBO Max offers HBO’s extensive library along with new Max Originals, blockbuster movies, and premium content.",
     "features": [
-      "HBO Originals",
-      "Cinematic releases",
-      "Offline viewing",
-      "Parental controls"
+      "4K Ultra HD Available",
+      "1",
+      "Movies, Series"
     ],
     "left":"10",
     "watchTime":"380"
@@ -93,10 +88,9 @@
     "frequency": "Yearly",
     "description": "Hoichoi is a Bengali entertainment platform featuring movies, web series, music, and more from Bangladesh and West Bengal.",
     "features": [
-      "Extensive Bengali content",
-      "Yearly subscription",
-      "Ad-free streaming",
-      "Downloadable content"
+      "2K Ultra HD Available",
+      "1",
+      "Movies, Series"
     ],
     "left":"21",
     "watchTime":"1000"
@@ -111,9 +105,8 @@
     "description": "Netflix is a popular subscription-based streaming service offering a wide variety of TV shows, movies, anime, documentaries, and more.",
     "features": [
       "4K Ultra HD Available",
-      "Watch on multiple devices",
-      "Download for offline viewing",
-      "No ads"
+      "2",
+      "Movies, Series, and Originals"
     ],
     "left":"20",
     "watchTime":"980"

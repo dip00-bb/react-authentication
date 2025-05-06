@@ -1,10 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import Linebar from './Charts/Linebar';
+import useTitle from '../Title/useTitle';
 
 const Dashboard = () => {
 
     const myProduct = useLoaderData();
+    useTitle("Dashboard")
 
     return (
         <div>
