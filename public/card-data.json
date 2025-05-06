@@ -12,7 +12,9 @@
       "Ad-free viewing",
       "Offline downloads",
       "Live sports coverage"
-    ]
+    ],
+    "left":"16",
+    "watchTime":"780"
   },
   {
     "id": "apple-tv",
@@ -27,7 +29,9 @@
       "Family sharing",
       "Offline viewing",
       "Available on Apple devices"
-    ]
+    ],
+    "left":"10",
+    "watchTime":"580"
   },
   {
     "id": "chorki",
@@ -42,7 +46,9 @@
       "Ad-free viewing",
       "Affordable pricing",
       "Mobile-friendly interface"
-    ]
+    ],
+    "left":"14",
+    "watchTime":"280"
   },
   {
     "id": "disney-plus",
@@ -57,7 +63,9 @@
       "Marvel and Star Wars series",
       "Offline downloads",
       "Multiple profiles"
-    ]
+    ],
+    "left":"13",
+    "watchTime":"480"
   },
   {
     "id": "hbo-max",
@@ -72,7 +80,9 @@
       "Cinematic releases",
       "Offline viewing",
       "Parental controls"
-    ]
+    ],
+    "left":"10",
+    "watchTime":"380"
   },
   {
     "id": "hoichoi",
@@ -87,7 +97,9 @@
       "Yearly subscription",
       "Ad-free streaming",
       "Downloadable content"
-    ]
+    ],
+    "left":"21",
+    "watchTime":"1000"
   },
   {
     "id": "netflix",
@@ -102,6 +114,8 @@
       "Watch on multiple devices",
       "Download for offline viewing",
       "No ads"
-    ]
+    ],
+    "left":"20",
+    "watchTime":"980"
   }
 ]

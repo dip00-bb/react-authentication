@@ -26,7 +26,7 @@ const UserProfile = () => {
         <div className="min-h-screen bg-gray-900 text-gray-200 px-4 py-10">
             <div className="max-w-3xl mx-auto bg-gray-800 rounded-2xl shadow-lg p-8">
                 <h1 className="text-4xl font-bold text-center mb-8 text-red-500">
-                    Your Profile - <span className='text-white'>Lava</span><span className='text-red-500'>ROX</span>
+                   <span className='text-red-500'>Lava</span><span className='text-white'>ROX</span><span className='text-white'>-</span>Profile 
                 </h1>
 
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-10">
@@ -42,7 +42,7 @@ const UserProfile = () => {
                         <p className="text-lg">
                             <span className="font-semibold text-white">Email:</span> {user.email}
                         </p>
-                        <div className="text-lg break-words">
+                        <div className="text-lg break-all whitespace-pre-wrap">
                             <span className="font-semibold text-white">Photo URL:</span> {user.photoURL}
                         </div>
                     </div>

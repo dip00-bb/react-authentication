@@ -16,7 +16,7 @@ const Navbar = () => {
         })
     }
 
-    const link = <><li><NavLink to='/'>Home</NavLink></li><li><NavLink to='/userdetails'>My Profile</NavLink></li></>;
+    const link = <><li><NavLink to='/'>Home</NavLink></li><li><NavLink to='/userdetails'>My Profile</NavLink></li><li><NavLink to='/dashboard'>Dashboard</NavLink></li></>;
     return (
         <div className="navbar bg-transparent shadow-sm">
             <div className="navbar-start">

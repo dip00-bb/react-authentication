@@ -10,6 +10,7 @@ import ErrorPage from "../Pages/ErrorPages/ErrorPage";
 import TermsAndCondition from "../Component/TermsAndCondition/TermsAndCondition";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import ForgetPassword from "../Authentication/ForgetPassword/ForgetPassword";
+import Dashboard from "../Component/Dashboard/Dashboard";
 
 export const router=createBrowserRouter([
     
@@ -46,6 +47,12 @@ export const router=createBrowserRouter([
             {
                 path:'/forgetpassword',
                 Component:ForgetPassword
+            },
+            {
+                path:'/dashboard',
+                loader:()=>fetch('/card-data.json'),
+                element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+                hydrateFallbackElement:<Loader></Loader>
             }
         ]
     },
