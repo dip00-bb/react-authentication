@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import useTitle from '../Component/Title/useTitle';
+import { Rate } from 'antd';
 
 const Details = () => {
 
 
     const subscriptionData = useLoaderData();
-
     const { id } = useParams();
-    useTitle(`${id}`)
+    useTitle(`${id}`);
+
+    const [review, setReview] = useState('');
+    const [rating, setRating] = useState(null);
+
+    const handleAddReview = (e) => {
+        e.preventDefault();
+        const review = e.target.review.value;
+        const rating = e.target.rating.value;
+        setReview(review);
+        setRating(rating);
+    }
+
     const matchedData = subscriptionData.find(data => data.id == id);
     const { thumbnail, name, TechCategory, price, frequency, description, features } = matchedData
     return (
@@ -38,12 +50,13 @@ const Details = () => {
 
             </div>
 
-            <div className="bg-[#2a2a2d] p-4 rounded-xl space-y-4">
+            <form onSubmit={handleAddReview} className="bg-[#2a2a2d] p-4 rounded-xl space-y-4">
                 <h2 className="text-2xl font-semibold">Leave a Review</h2>
                 <textarea
                     className="w-full p-3 rounded-lg bg-[#1f1f21] text-white border border-gray-700 focus:outline-none"
                     rows="4"
                     placeholder="Write your review here..."
+                    name='review'
                 ></textarea>
                 <input
                     type="number"
@@ -51,11 +64,20 @@ const Details = () => {
                     max="5"
                     className="w-full p-3 rounded-lg bg-[#1f1f21] text-white border border-gray-700 focus:outline-none"
                     placeholder="Rating (1 to 5)"
+                    name='rating'
                 />
-                <button className="w-full py-3 rounded-lg bg-gradient-to-r from-red-500 to-purple-600 hover:opacity-90 transition-all">
+                <button type='submit' className="w-full py-3 rounded-lg bg-gradient-to-r from-red-500 to-purple-600 hover:opacity-90 transition-all">
                     Submit Review
                 </button>
-            </div>
+            </form>
+
+            {
+                console.log(rating)
+            }
+            {
+                
+                review && <div className='wrap-break-word border-1 border-amber-400 p-4 rounded-xl flex flex-col gap-4'> {<div>{<Rate defaultValue={rating} disabled />} </div>} <p>{review}</p> </div>
+            }
         </div>
     );
 };
