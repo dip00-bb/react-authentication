@@ -2,12 +2,12 @@ import React from 'react';
 import Navbar from '../Component/Header/Navbar';
 import { Outlet, useLocation } from 'react-router';
 import Footer from '../Component/Footer/Footer';
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 const MainLayout = () => {
 
     const { pathname } = useLocation();
-    console.log("current location is", pathname)
+    // console.log("current location is", pathname)
 
 
 
@@ -32,22 +32,23 @@ const MainLayout = () => {
 
 
     return (
-        <div style={bgStyle} className='px-2'>
+        <div style={bgStyle}>
+            <div className='px-2'>
 
-            <header className='py-5'>
-                <Navbar />
-            </header>
+                <header className='py-5'>
+                    <Navbar />
+                </header>
 
-            <main className='py-5' >
-                <Outlet />
-            </main>
-
+                <main className='py-5' >
+                    <Outlet />
+                </main>
+            </div>
             <footer className='pt-5'>
                 <Footer />
             </footer>
             <ToastContainer />
         </div>
-                    
+
     );
 };
 

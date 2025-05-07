@@ -9,7 +9,7 @@ export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
     const reference=useRef()
  
-    console.log("the refence",reference?.current?.value)
+    // console.log("the refence",reference?.current?.value)
 
     useTitle("login")
     const { logInUser, setUser, createWithGoogle,setEmail } = use(AuthContext);
@@ -33,7 +33,7 @@ export default function Login() {
         const email = target.email.value;
         const password = target.password.value;
 
-        console.log(email, password)
+        // console.log(email, password)
 
         logInUser(email, password).then(result => {
             setUser(result.user);

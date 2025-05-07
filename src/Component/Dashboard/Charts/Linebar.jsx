@@ -1,39 +1,37 @@
+
 import React from 'react';
 import {
-  ResponsiveContainer,
-  AreaChart,
-  Area,
+  BarChart,
+  Bar,
+  Rectangle,
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
 } from 'recharts';
 
 const Linebar = ({ data }) => (
-  <ResponsiveContainer width="100%" height={400}>
-    <AreaChart
+  <ResponsiveContainer width="100%" height={300}>
+    <BarChart
       data={data}
-      margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+      margin={{
+        top: 5,
+        right: 30,
+        left: 20,
+        bottom: 5,
+      }}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
-      <YAxis dataKey="watchTime"/>
+      <YAxis />
       <Tooltip />
-      <Area
-        type="monotone"
-        dataKey="left"
-        stackId="1"
-        stroke="#8884d8"
-        fill="#8884d8"
+      <Legend />
+      <Bar
+        dataKey="watchTime" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />}
       />
-      <Area
-        type="monotone"
-        dataKey="watchTime"
-        stackId="1"
-        stroke="#82ca9d"
-        fill="#82ca9d"
-      />
-    </AreaChart>
+    </BarChart>
   </ResponsiveContainer>
 );
 

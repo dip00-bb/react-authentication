@@ -4,9 +4,9 @@ import useTitle from '../Title/useTitle';
 const TermsAndCondition = () => {
     useTitle("Terms&Conditions")
   return (
-    <div className="bg-gray-900 text-gray-200 min-h-screen px-6 py-12">
+    <div className="bg-transparent text-gray-200 min-h-screen px-6 py-12">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-8 text-center">
+        <h1 className="text-4xl font-semibold mb-8 text-center text-red-500">
           Terms and Conditions
         </h1>
 
@@ -55,7 +55,7 @@ const TermsAndCondition = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-2">7. Contact Us</h2>
           <p className="text-gray-300">
-            If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:support@yourmoviewebsite.com" className="text-red-500 underline">support@yourmoviewebsite.com</a>.
+            If you have any questions about these Terms and Conditions, please contact us at <a href="https://subscription-box-1eb8d.web.app/" target='_blank' className="text-red-500 underline">https://subscription-box-1eb8d.web.app/</a>.
           </p>
         </section>
       </div>

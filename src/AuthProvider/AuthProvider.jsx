@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
     // provider 
     const provider = new GoogleAuthProvider;
 
-    console.log(user)
+    // console.log(user)
 
 
     const createWithGoogle = () => {

@@ -37,7 +37,7 @@ const Details = () => {
                     <p className="text-gray-400">Streaming Service</p>
                     <p><span className="font-semibold">{frequency} Cost: </span> {price}</p>
                     <p><span className="font-semibold">Resolution:</span>{features[0]}</p>
-                    <p><span className="font-semibold">Simultaneous Screens: </span> {features[1]}</p>
+                    <p><span className="font-semibold"></span> {features[1]}</p>
                     <p><span className="font-semibold">Content:</span> {features[2]}</p>
 
                     <div className='mt-5'>

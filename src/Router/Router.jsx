@@ -11,6 +11,7 @@ import TermsAndCondition from "../Component/TermsAndCondition/TermsAndCondition"
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import ForgetPassword from "../Authentication/ForgetPassword/ForgetPassword";
 import Dashboard from "../Component/Dashboard/Dashboard";
+import PrivacyPolicy from "../Component/PrivacyPolicy/PrivacyPolicy";
 
 export const router=createBrowserRouter([
     
@@ -39,6 +40,10 @@ export const router=createBrowserRouter([
             {
                 path:'/termscondition',
                 Component:TermsAndCondition
+            },
+            {
+                path:'/privacypolicy',
+                Component:PrivacyPolicy
             },
             {
                 path:'/userdetails',

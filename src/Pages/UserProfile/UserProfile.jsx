@@ -13,18 +13,25 @@ const UserProfile = () => {
     const handleUpdateUser=(e)=>{
         e.preventDefault();
         const name=e.target.name.value;
-        const url=e.target.url.value
-        updateUser(name,url).then(()=>{
-            toast('Profile updated successful');
-            setUser({...user, displayName: name, photoURL: url})
-        }).catch(error=>{
-            toast.warn(error.message)
-        })
+        const url=e.target.url.value;
+        // console.log("name",name,url)
+        if(name.length===0 && url.length===0){
+            toast.warn("All input field can't be empty");
+            return
+        }else{
+            updateUser(name,url).then(()=>{
+                toast('Profile updated successful');
+                setUser({...user, displayName: name, photoURL: url})
+            }).catch(error=>{
+                toast.warn(error.message)
+            })
+        }
+
     }
 
     return (
-        <div className="min-h-screen bg-gray-900 text-gray-200 px-4 py-10">
-            <div className="max-w-3xl mx-auto bg-gray-800 rounded-2xl shadow-lg p-8">
+        <div className="min-h-screen bg-transparent text-gray-200 px-4 py-10">
+            <div className="max-w-3xl mx-auto bg-gray-800/30 rounded-2xl shadow-lg p-8">
                 <h1 className="text-4xl font-bold text-center mb-8 text-red-500">
                    <span className='text-red-500'>Lava</span><span className='text-white'>ROX</span><span className='text-white'>-</span>Profile 
                 </h1>
@@ -53,8 +60,6 @@ const UserProfile = () => {
                     <div>
                         <label className="block mb-2 text-sm font-medium text-gray-300">Update Name</label>
                         <input
-
-                            required
                             type="text"
                             name='name'
                             placeholder="Enter new name"
@@ -65,7 +70,6 @@ const UserProfile = () => {
                     <div>
                         <label className="block mb-2 text-sm font-medium text-gray-300">Update Photo URL</label>
                         <input 
-                            required
                             type="text"
                             name='url'
                             placeholder="Enter new photo URL"

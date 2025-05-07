@@ -16,7 +16,7 @@ const Dashboard = () => {
                 {
                     myProduct.map(product => {
                         return (
-                            <div className='flex p-4 flex-col border-1 border-red-50 gap-2 rounded-xl md:border-0 items-center md:grid grid-cols-1 md:grid-cols-6 justify-center md:gap-5 '>
+                            <div key={product.id} className='flex p-4 flex-col border-1 border-red-50 gap-2 rounded-xl md:border-0 items-center md:grid grid-cols-1 md:grid-cols-6 justify-center md:gap-5 '>
                                 <div className='md:flex justify-center items-center p-4'>
                                     <div className='md:w-[5rem] md:h-[3rem] bg-amber-500 flex justify-center mb-3'><img className='h-full w-full' src={product.thumbnail}></img></div>
                                 </div>
@@ -30,7 +30,8 @@ const Dashboard = () => {
                     })
                 }
             </div>
-
+                
+                <h1 className='text-red-500 text-2xl text-center my-5'>Watch Time Report</h1>
 
             <div className='mt-10'>
                 <Linebar data={myProduct}/>
