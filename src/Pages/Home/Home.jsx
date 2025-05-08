@@ -20,9 +20,11 @@ const Home = () => {
 
             <div className='py-5'>
                 <h1 className='text-red-500 text-3xl font-bold text-center mb-10'>Services</h1>
-                <Suspense fallback={<Loader />}>
-                    <CardsBody />
-                </Suspense>
+                <div className='px-5'>
+                    <Suspense fallback={<Loader />}>
+                        <CardsBody />
+                    </Suspense>
+                </div>
             </div>
 
             <div className='py-5'>

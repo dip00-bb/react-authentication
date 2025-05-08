@@ -9,7 +9,7 @@ const Slider = () => {
     return (
 
         <div className='px-5 lg:px-10 rounded-3xl h-fit' >
-            <Swiper navigation={false} modules={[Navigation]} className="mySwiper rounded-3xl lg:h-[60rem]" >
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper rounded-3xl lg:h-[60rem]" >
                 <SwiperSlide><img src="/superman.jpg "
                     className="w-full rounded-3xl" /></SwiperSlide>
                 <SwiperSlide><img src="/avenger.jpg"

@@ -49,7 +49,7 @@ export default function Footer() {
 
           <img src="/responsive.svg" alt="Devices" className="w-48 mb-6" />
 
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <a href="#">
               <img src="/google1.png" alt="Get it on Google Play" className="w-32" />
             </a>
