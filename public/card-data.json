@@ -48,22 +48,6 @@
     "watchTime":"280"
   },
   {
-    "id": "disney-plus",
-    "thumbnail": "https://i.ibb.co.com/PsPjWCm6/disney.jpg",
-    "name": "Disney+",
-    "TechCategory": "Streaming Service",
-    "price": "$7.99",
-    "frequency": "Monthly",
-    "description": "Disney+ offers movies and shows from Disney, Pixar, Marvel, Star Wars, and National Geographic, all in one place.",
-    "features": [
-      "4K Ultra HD Available",
-      "Simultaneous Screens: 2",
-      "Movies, Series"
-    ],
-    "left":"13",
-    "watchTime":"480"
-  },
-  {
     "id": "hbo-max",
     "thumbnail": "https://i.ibb.co.com/d03rGbks/hbo.jpg",
     "name": "HBO Max",

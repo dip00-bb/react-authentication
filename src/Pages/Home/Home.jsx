@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <h1 className="font-extrabold text-red-500 text-2xl md:text-4xl lg:text-6xl text-center my-5 mb-10">
-                Your Gateway to <p> World-Class Cinema</p>
+                Your Gateway to <p className='mt-3'> World-Class Cinema</p>
             </h1>
 
 

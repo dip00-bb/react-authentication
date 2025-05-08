@@ -12,7 +12,7 @@ const Dashboard = () => {
         <div>
             <h1 className='text-center text-4xl text-bold text-red-600 mb-5'>Monitor your activity</h1>
 
-            <div className='flex flex-col gap-3 px-5 md:px-1'>
+            <div className='flex flex-col gap-3 px-5 md:px-1 md:border-1 md:border-blue-700 rounded-2xl'>
                 {
                     myProduct.map(product => {
                         return (
@@ -21,10 +21,10 @@ const Dashboard = () => {
                                     <div className='md:w-[5rem] md:h-[3rem] bg-amber-500 flex justify-center mb-3'><img className='h-full w-full' src={product.thumbnail}></img></div>
                                 </div>
                                 <div className='md:text-center'>{product.name}</div>
-                                <div className='md:text-center'>{product.price}</div>
+                                <div className='md:text-center'><span className='text-red-400'>{product.price}</span></div>
                                 <div className='md:text-center'>{product.frequency}</div>
-                                <div className='md:text-center'>{`${product.left} day left`} </div>
-                                <div className="md:text-center">Watching&nbsp;{product.watchTime} minute</div>
+                                <div className='md:text-center'> <span className='text-red-400'>{product.left}</span>&nbsp; day left </div>
+                                <div className="md:text-center font-medium">Watching Time: &nbsp;<span className='text-red-400'>{product.watchTime}</span> minute</div>
                             </div>
                         )
                     })

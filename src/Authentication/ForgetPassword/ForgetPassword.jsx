@@ -28,7 +28,9 @@ const ForgetPassword = () => {
       
     return (
         <div className="min-h-screen flex items-center justify-center p-4">
+            
             <form onSubmit={handleResetPassword}>
+            <h1 className='font-extrabold text-center text-4xl mb-5'>Reset Your Password</h1>
                 <input
                     type="email"
                     name="email"
