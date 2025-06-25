@@ -1,61 +1,80 @@
-# LavaRox -- Ott Subscription Platform
+# 🔥 LavaRox – OTT Subscription Platform  
 
-# preview 
-👀https://subscription-box-1eb8d.web.app/
+**Live Preview** 👀  
+🌐 [https://subscription-box-1eb8d.web.app/](https://subscription-box-1eb8d.web.app/)
 
-# 📸 Screenshots
+---
 
-![image](https://github.com/user-attachments/assets/bef449f4-c55c-4af6-95c0-353c3dc865e4)
-![image](https://github.com/user-attachments/assets/816ac320-c02a-4333-946d-94759edd5eed)
-![image](https://github.com/user-attachments/assets/fcc6dfbb-fc01-4e66-869d-fe12e9a6c64b)
-![image](https://github.com/user-attachments/assets/0855b539-a9e3-4847-a938-1a5bd30aab1e)
+## 📸 Screenshots  
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/bef449f4-c55c-4af6-95c0-353c3dc865e4" width="400"/>
+  <img src="https://github.com/user-attachments/assets/816ac320-c02a-4333-946d-94759edd5eed" width="400"/>
+  <img src="https://github.com/user-attachments/assets/fcc6dfbb-fc01-4e66-869d-fe12e9a6c64b" width="400"/>
+  <img src="https://github.com/user-attachments/assets/0855b539-a9e3-4847-a938-1a5bd30aab1e" width="400"/>
+</div>
 
+---
 
+## 🚀 Key Features  
 
-# Key feature 
+- 🔎 **View More Details** – Instantly explore full OTT platform information and purchase in one click.  
+- ✍️ **User Reviews** – Share and view feedback on your favorite platforms.  
+- 👤 **Profile Management** – Access and update user profile with ease.  
+- 📊 **Subscription Monitoring** – Track your OTT subscriptions visually with activity logs.  
+- ⏳ **Remaining Days Chart** – Area chart to clearly show how many days are left in your subscriptions.  
+- 🔐 **Secure Authentication** – Robust signup/login system with strong password validation.  
+- 🔁 **Password Reset** – Easily reset your password with our forget-password feature.  
 
-We have implement lot of feature in our website to provide a best user experience.
+---
 
-- 🔐 Just only clicking on view more button user can show all details of their favorite ott platforms and buy it easily.
+## 🧱 Tech Stack  
 
-2.There are also have a review field where user can submit their valuable review about this product.
+- ⚛️ React  
+- 💨 Tailwind CSS  
+- 🌼 DaisyUI  
+- 🔁 React Router DOM  
+- 🔥 Firebase Auth (Google + Email/Password)  
+- 📦 Axios  
+- 🎞️ Framer Motion  
+- 🔔 React Toastify  
+- ⚠️ SweetAlert2  
+- 🎠 Swiper.js  
+- 🎬 Lottie-react  
+- 📉 Recharts  
+- 🎨 React Icons  
+- 🌟 Ant Design (for rating stars)  
+- 🧩 React Lucide (modern icon set)
 
-3.Using my profile feature user can see their profile details and also can update it easily .
+---
 
-4.We have also add a monitoring feature where from they can monitor their subscribed ott platform details.
+## 🧭 Pages & Routes  
 
-5.In the monitor section have a area chart with that user can see easily how may day left of their subscription . 
+| Route            | Description                                      |
+|------------------|--------------------------------------------------|
+| `/`              | 🏠 Home Page                                     |
+| `/userdetails`   | 👤 User Profile (Private)                        |
+| `/dashboard`     | 📊 Dashboard to monitor user activity            |
+| `/platform/:id`  | 📺 View detailed info of a specific OTT platform |
 
-6.With our modern and advance register and log in feature user can easily sign up and register on our page.
+---
 
-7.On register field there have a strong restriction to use a weak password. Our modern and secure register feature ensure that the password will be strong which are safe from hacker
+## 📦 NPM Packages Used  
 
-8.With forget user password feature user can easily reset their password
+- **React Router DOM** – Client-side routing  
+- **Lucide React** – Trendy icons  
+- **Ant Design** – Rating stars  
+- **Swiper.js** – Responsive slider  
+- **Lottie-react** – Engaging animations  
+- **Recharts** – Charts and data visualization  
 
+---
 
+## 🛠️ Local Setup Instructions  
 
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/dip00-bb/react-authentication.git
 
-
-
-# Npm packages
-
-Npm packages always like a blessing for developer. In this project we have use lot of npm packages 
-
-# React router 
-
-React Router for routing
-
-# Lucide React
-
-React lucide for showing modern icon on website
-
-# antd 
-
-Antd for showing rating star
-
-# swiper 
-
-Swiper for showing a responsive modern slider
 
 
 
