@@ -16,7 +16,7 @@
 
 We have implement lot of feature in our website to provide a best user experience.
 
--- 🔐 Just only clicking on view more button user can show all details of their favorite ott platforms and buy it easily.
+- 🔐 Just only clicking on view more button user can show all details of their favorite ott platforms and buy it easily.
 
 2.There are also have a review field where user can submit their valuable review about this product.
 
