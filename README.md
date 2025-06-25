@@ -74,6 +74,10 @@
 1. **Clone the Repository**  
    ```bash
    git clone https://github.com/dip00-bb/react-authentication.git
+2. **Install Dependencies**
+  ```bash
+  npm install
+
 
 
 
