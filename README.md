@@ -3,7 +3,8 @@
 # preview 
 👀https://subscription-box-1eb8d.web.app/
 
-<img src="https://scontent.fdac162-1.fna.fbcdn.net/v/t39.30808-6/512794412_685315944478626_7767837554979541716_n.png?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ZDNa5aDfGmUQ7kNvwEqNMfQ&_nc_oc=AdlubHkfPzkBy9tn1Ro5TbLhhd0yUbtuLo3n2R3CYa8UfgnmTjJcYufzeD7J_MMetcE&_nc_zt=23&_nc_ht=scontent.fdac162-1.fna&_nc_gid=t-TBMjexbZ-N2h6G0CyK_g&oh=00_AfOTVQhlrqLe4QKk6R5oes1rbjaTh55qBUojnQKHVdsfUg&oe=68616A9F" width="full" style="border-radius: 50%;" alt="Dip Chondo Profile Picture" />
+![image](https://github.com/user-attachments/assets/db534949-6b74-4e50-96fa-fe2f482a5a8d)
+
 
 
 # Key feature 
