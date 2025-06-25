@@ -3,7 +3,11 @@
 # preview 
 👀https://subscription-box-1eb8d.web.app/
 
-![image](https://github.com/user-attachments/assets/db534949-6b74-4e50-96fa-fe2f482a5a8d)
+
+
+![image](https://github.com/user-attachments/assets/816ac320-c02a-4333-946d-94759edd5eed)
+![image](https://github.com/user-attachments/assets/fcc6dfbb-fc01-4e66-869d-fe12e9a6c64b)
+![image](https://github.com/user-attachments/assets/0855b539-a9e3-4847-a938-1a5bd30aab1e)
 
 
 
