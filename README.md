@@ -1,4 +1,4 @@
-#LavaRox -- Ott Subscription Platform
+# LavaRox -- Ott Subscription Platform
 
 # Purpose 
 
