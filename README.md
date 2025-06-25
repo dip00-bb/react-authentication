@@ -1,10 +1,5 @@
 # LavaRox -- Ott Subscription Platform
 
-# Purpose 
-
-In today's world watching movie is become the main way of entertainment. Most of the people are choose ott to watch their favorite movie after covid pandemic. But main problem is buying the ott subscription is very annoying. There are have lot of issue to buy the ott subscription because most of the people still do not have a david or credit card to buy subscription of popular ott platforms.In that case we have introduce our LavaRox to solve it. With our website people from anywhere in the world can buy ott subscription easily with native mobile banking services. Now there have not any problem with david or credit card. And by our user dash board feature they can monitor their subscription details. 
-
-
 # preview 
 👀https://subscription-box-1eb8d.web.app/
 
