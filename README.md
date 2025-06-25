@@ -1,5 +1,4 @@
-# Project Name
-The name of my project is LavaRox which is actually a ott subscription platform.
+#LavaRox -- Ott Subscription Platform
 
 # Purpose 
 
@@ -7,8 +6,7 @@ In today's world watching movie is become the main way of entertainment. Most of
 
 
 # preview 
-
-live : https://subscription-box-1eb8d.web.app/
+👀https://subscription-box-1eb8d.web.app/
 
 # Key feature 
 
