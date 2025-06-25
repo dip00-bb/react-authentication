@@ -75,8 +75,16 @@
    ```bash
    git clone https://github.com/dip00-bb/react-authentication.git
 2. **Install Dependencies**
-  ```bash
-  npm install
+   ```bash
+   npm install
+
+3. **Start Development Server**
+   ```
+   npm run dev
+
+4. ** Visit the App **
+
+  Open your browser and go to 👉 http://localhost:5173
 
 
 
