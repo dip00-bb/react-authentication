@@ -90,7 +90,7 @@
 
 ## 🙌 Thank You
 
-Thank you for visiting  🌍❤️🍴
+Thank you for visiting  🌍❤️
 
 ---
 
