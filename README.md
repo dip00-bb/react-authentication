@@ -82,7 +82,7 @@
    ```
    npm run dev
 
-4. ** Visit the App **
+4. **Visit the App**
 
   Open your browser and go to 👉 http://localhost:5173
 
